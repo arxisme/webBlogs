@@ -1,0 +1,291 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;700&display=swap');
+
+/* Import Tailwind CSS */
+@import "tailwindcss";
+
+/* Import FontAwesome */
+@import '@fortawesome/fontawesome-free/css/all.css';
+
+
+/* Theme Variables */
+@theme {
+  --font-montserrat: "Montserrat", "sans-serif";
+  --font-sans: 'sans-serif', "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --color-base-100: oklch(98.71% 0.02 123.72);
+  --color-base-200: oklch(91.8% 0.018 123.72);
+  --color-base-300: oklch(84.89% 0.017 123.72);
+  --color-blue: oklch(74% 0.16 232.661);
+  --color-base-content: oklch(19.742% 0.004 123.72);
+  --color-primary: oklch(58.92% 0.199 134.6);
+  --color-primary-content: oklch(11.784% 0.039 134.6);
+  --color-secondary: oklch(77.75% 0.196 111.09);
+  --color-secondary-green: oklch(92% 0.084 155.995);
+  --color-secondary-content: oklch(15.55% 0.039 111.09);
+  --color-accent: oklch(85.39% 0.201 100.73);
+  --color-accent-content: oklch(17.078% 0.04 100.73);
+  --color-neutral: oklch(30.98% 0.075 108.6);
+  --color-neutral-content: oklch(86.196% 0.015 108.6);
+  --color-info: oklch(86.19% 0.047 224.14);
+  --color-info-content: oklch(17.238% 0.009 224.14);
+  --color-success: oklch(86.19% 0.047 157.85);
+  --color-success-content: oklch(17.238% 0.009 157.85);
+  --color-warning: oklch(86.19% 0.047 102.15);
+  --color-warning-content: oklch(17.238% 0.009 102.15);
+  --color-error: oklch(86.19% 0.047 25.85);
+  --color-error-content: oklch(17.238% 0.009 25.85);
+  --radius-selector: 1rem;
+  --radius-field: 0.5rem;
+  --radius-box: 1rem;
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+  --border: 1px;
+  --depth: 0;
+  --noise: 0;
+}
+
+@layer base {
+  @font-face {
+    font-family: 'Montserrat', sans-serif;
+    src: url('/fonts/HelveticaNeue-Bold.otf') format('opentype');
+    font-weight: 700;
+    /* Bold */
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Montserrat', sans-serif;
+    src: url('https://fonts.gstatic.com/s/montserrat/v15/JTURjIg1_i6t8kCHKm459WlhzgyM.woff2') format('woff2');
+    font-weight: 300;
+    /* Light */
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Montserrat', sans-serif;
+    src: url('/fonts/HelveticaNeue-Medium.otf') format('opentype');
+    font-weight: 500;
+    /* Medium */
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Montserrat', sans-serif;
+    src: url('/fonts/HelveticaNeue-Roman.otf') format('opentype');
+    font-weight: 400;
+    /* Regular */
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Montserrat', sans-serif;
+    src: url('/fonts/HelveticaNeue-Thin.otf') format('opentype');
+    font-weight: 100;
+    /* Thin */
+    font-style: normal;
+  }
+}
+
+p {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+
+}
+
+/* h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400; 
+  font-size: 3rem; 
+} */
+
+.intro-text {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  /* Light */
+  
+}
+.semi-bold{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  /* Medium */
+}
+.mid-bold{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  /* Medium */
+}
+
+.main-heading {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  /* Regular */
+  
+  /* Default size for larger screens */
+}
+
+
+
+
+.animated-rectangle {
+  position: relative;
+  border: 1px solid var(--color-gray-500, gray);
+  /* Thin border */
+  animation: move-rectangle 7s infinite ease-in-out alternate;
+}
+
+.animated-rectangle-1 {
+  position: relative;
+  border: 1px solid var(--color-gray-500, gray);
+  /* Thin border */
+  animation: move-rectangle-1 10s infinite ease-in-out alternate;
+}
+
+.animated-rectangle-2 {
+  position: relative;
+  border: 1px solid var(--color-gray-500, gray);
+  /* Thin border */
+  animation: move-rectangle-2 10s infinite ease-in-out alternate;
+}
+
+/* Animation for rectangles */
+@keyframes move-rectangle-1 {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+
+  25% {
+    transform: translate(5px, -5px) rotate(30deg);
+  }
+
+  50% {
+    transform: translate(-15px, 5px) rotate(15deg);
+  }
+
+  75% {
+    transform: translate(3px, -33px) rotate(0deg);
+  }
+
+  100% {
+    transform: translate(-3px, 3px) rotate(-15deg);
+  }
+}
+
+@keyframes move-rectangle-2 {
+  0% {
+    transform: translate(0, 0) rotate(10deg);
+  }
+
+  25% {
+    transform: translate(5px, -5px) rotate(60deg);
+  }
+
+  50% {
+    transform: translate(-15px, 5px) rotate(180deg);
+  }
+
+  75% {
+    transform: translate(3px, -33px) rotate(0deg);
+  }
+
+  100% {
+    transform: translate(-3px, 3px) rotate(-170deg);
+  }
+}
+
+@keyframes move-rectangle {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+
+  25% {
+    transform: translate(5px, -5px);
+  }
+
+  50% {
+    transform: translate(-5px, 5px);
+  }
+
+  75% {
+    transform: translate(3px, -3px);
+  }
+
+  100% {
+    transform: translate(-3px, 3px) rotate(-1deg);
+  }
+}
+
+/* Ensure only two-thirds of the rectangles are visible on small screens */
+.small-screen-clip {
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .small-screen-clip {
+    width: 66.67%;
+    /* Two-thirds of the container width */
+    height: 100%;
+    /* Full height */
+  }
+}
+
+/* Arcs animation */
+.arc {
+  transform-origin: center;
+  animation: rotate 10s linear infinite;
+}
+
+.arc-1 {
+  animation-duration: 6s;
+  /* Fastest rotation */
+}
+
+.arc-2 {
+  animation-duration: 8s;
+  /* Medium rotation */
+}
+
+.arc-3 {
+  animation-duration: 10s;
+  /* Slowest rotation */
+}
+
+.arc-3 {
+  animation-duration: 12s;
+  /* Slowest rotation */
+}
+
+.arc-4 {
+  animation-duration: 14s;
+  /* Slowest rotation */
+}
+.arc-5 {
+  animation-duration: 16s;
+  /* Slowest rotation */
+}
+.arc-6 {
+  animation-duration: 18s;
+  /* Slowest rotation */
+}
+
+/* Keyframes for rotation */
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.sticky-sidebar {
+  position: sticky;
+  top: 1rem; /* Adjust the top offset as needed */
+  align-self: flex-start; /* Ensures proper alignment in flex layouts */
+}
+ol {
+  list-style-type: decimal;
+  padding-left: 1.5rem;
+}
