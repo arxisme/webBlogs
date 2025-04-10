@@ -21,7 +21,7 @@
 
     <div class="socials flex justify-center space-x-6">
       <a href="https://twitter.com/arsh11100" target="_blank" class="text-gray-800 text-4xl hover:opacity-80">
-        <i class="fab fa-x-twitter"></i>
+        <i class="fab fa-x-twitter font-sans "></i>
       </a>
       <a href="https://bsky.app/arsh11100" target="_blank" class="text-blue-300 text-4xl hover:opacity-80">
         <i class="fab fa-bluesky"></i>
