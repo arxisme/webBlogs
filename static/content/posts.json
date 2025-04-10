@@ -1,4 +1,15 @@
 [
-  "first-post.md",
-  "second-post.md"
+  {
+    "slug": "first-post",
+    "title": "My First Post",
+    "date": "2025-04-01",
+    "description": "An introduction to my blog and its purpose."
+  },
+ 
+  {
+    "slug": "second-post",
+    "title": "Markdown Tips and Tricks",
+    "date": "2025-04-08",
+    "description": "Learn how to write and format Markdown effectively."
+  }
 ]

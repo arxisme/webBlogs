@@ -3,7 +3,7 @@ import { getAllPosts } from '$lib/posts';
 
 export async function load({ params }) {
 
-  const posts = getAllPosts();
+  const posts = await getAllPosts();
 
   // Get the 5 most recent posts
   const recentPosts = posts

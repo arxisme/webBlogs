@@ -1,8 +1,10 @@
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
+import axios from 'axios';
 
 const contentDir = path.join(process.cwd(), 'static/content');
+const GITHUB_CONTENT_URL = 'https://raw.githubusercontent.com/arxisme/webBlogs/main/static/content/';
 
 type PostMeta = {
   slug: string;
@@ -10,35 +12,25 @@ type PostMeta = {
   date: string;
 };
 
-export function getAllPosts(): PostMeta[] {
+export async function getAllPosts(): Promise<PostMeta[]> {
   try {
-    const files = fs.readdirSync(contentDir);
-    
-    return files.map((file) => {
-      const slug = file.replace('.md', '');
-      const raw = fs.readFileSync(path.join(contentDir, file), 'utf-8');
-      const { data } = matter(raw);
-      
-      return {
-        slug,
-        title: data.title ?? 'Untitled',
-        date: data.date ?? 'Unknown'
-      };
-    });
+    // Example: Fetch list of files dynamically (optional, if hosted in a GitHub repo)
+    const response = await axios.get(`${GITHUB_CONTENT_URL}/posts.json`);
+    return response.data; // Use a pre-generated JSON with metadata
   } catch (error) {
-    console.error('Error reading posts directory:', error);
+    console.error('Error fetching posts:', error);
     return [];
   }
 }
 
-export function getPost(slug: string) {
+export async function getPost(slug: string): Promise<any> {
   try {
-    const filePath = path.join(contentDir, `${slug}.md`);
-    const raw = fs.readFileSync(filePath, 'utf-8');
+    const response = await axios.get(`${GITHUB_CONTENT_URL}/${slug}.md`);
+    const raw = response.data;
     const { data, content } = matter(raw);
     return { ...data, content };
   } catch (error) {
-    console.error(`Error reading post ${slug}:`, error);
+    console.error(`Error fetching post ${slug}:`, error);
     return null;
   }
 }

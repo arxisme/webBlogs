@@ -1,6 +1,9 @@
 <script lang="ts">
   export let data;
-  const posts = data.posts;
+  let posts: { slug: string; title: string; date: string }[] = [];
+  data.posts.then((resolvedPosts) => {
+    posts = resolvedPosts;
+  });
 
   // Function to format the date
   function formatDate(dateString: string): string {
@@ -27,16 +30,17 @@
     }
   }
 </script>
-
-
-<ul class="space-y-3">
-  {#each posts as post}
-    <li>
+{#if posts.length > 0}
+  <ul class="space-y-3">
+    {#each posts as post}
       <li>
         <a href={`/blog/${post.slug}`} class="text-red-400 mid-bold hover:underline">
           {post.title}
         </a>
         <p class="text-light text-sm text-gray-500">{formatDate(post.date)}</p>
       </li>
-  {/each}
-</ul>
+    {/each}
+  </ul>
+{:else}
+  <p>Loading posts...</p>
+{/if}

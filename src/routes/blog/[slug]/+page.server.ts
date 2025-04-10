@@ -18,8 +18,8 @@ function normalizeLatex(content: string): string {
 }
 
 export async function load({ params }) {
-  const post = getPost(params.slug);
-  const posts = getAllPosts();
+  const post = await getPost(params.slug);
+  const posts = await getAllPosts();
 
   // Normalize LaTeX expressions to remove line breaks
   if (!post) {
