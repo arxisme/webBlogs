@@ -37,17 +37,17 @@
 	<div class="flex flex-col bg-base-100 text-base-content">
 		<div class="h-20 max-sm:hidden"></div>
 		<div class="flex sm:justify-between max-sm:flex-col-reverse ">
-			<div class="flex flex-col justify-center pt-10">
+			<div class="flex flex-col justify-center sm:pt-30">
 				<p class="intro-text text-2xl max-md:text-xl">Hello World! I am</p>
 				<h1 class="text-5xl main-heading max-md:text-3xl">Arshad Ahmed</h1>
 			</div>
 			<!-- Arcs container -->
 			<div class="flex justify-end">
-				<div class="relative w-20 h-50 sm:w-80 sm:h-80 p-0 m-0 max-md:overflow-hidden max-md:w-80">
+				<div class="relative w-20 h-60 sm:w-80 sm:h-80 p-0 m-0 max-md:overflow-hidden max-md:w-80 max:sm:w-50">
 					<svg class="absolute top-0 left-0 w-full h-full m-0 p-0" viewBox="0 0 200 200">
 						<!-- Arcs -->
 						<circle
-							class="arc arc-1 max-sm:hidden"
+							class="arc arc-1 "
 							cx="100"
 							cy="100"
 							r="70"
@@ -57,7 +57,7 @@
 							stroke-dasharray="225 225"
 						/>
 						<circle
-							class="arc arc-2 max-sm:hidden"
+							class="arc arc-2 "
 							cx="100"
 							cy="100"
 							r="58"
