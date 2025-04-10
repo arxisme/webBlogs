@@ -119,7 +119,7 @@
 			<div class="h-2"></div>
 			<a href="/blog" class="main-heading text-2xl max-md:text-xl"> Go to blogs → </a>
 
-			<footer class="mt-auto pt-13">
+			<!-- <footer class="mt-auto pt-13">
 				<h1 class="main-heading text-xl pb-3">Recent Posts</h1>
 				<div class="w-full">
 					<ul class="space-y-2">
@@ -133,7 +133,7 @@
 						{/each}
 					</ul>
 				</div>
-			</footer>
+			</footer> -->
 		</div>
 	</div>
 
