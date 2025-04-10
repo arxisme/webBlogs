@@ -55,7 +55,7 @@
     <ul class="space-y-2">
       {#each data.recentPosts as post}
       <li>
-        <a href={`/blog/${post.slug}`} class="text-red-400 mid-bold hover:underline">
+        <a href={`/blog/${post.slug}`} class="text-teal-400 mid-bold hover:underline">
           {post.title}
         </a>
         <p class="text-light text-sm text-gray-500">{formatDate(post.date)}</p>

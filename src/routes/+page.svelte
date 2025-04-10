@@ -117,7 +117,7 @@
 				Computer Science, physics, movies, books etc.
 			</p>
 			<div class="h-2"></div>
-			<a href="/blog" class="main-heading text-2xl max-md:text-xl"> Go to blogs → </a>
+			<a href="/blog" class="main-heading text-2xl text-teal-500 max-md:text-xl"> Go to blogs → </a>
 
 			<footer class="mt-auto pt-13">
 				<h1 class="main-heading text-xl pb-3">Recent Posts</h1>
@@ -125,7 +125,7 @@
 					<ul class="space-y-2">
 						{#each data.recentPosts as post}
 							<li>
-								<a href={`/blog/${post.slug}`} class="text-red-400 mid-bold hover:underline">
+								<a href={`/blog/${post.slug}`} class="text-teal-500 mid-bold hover:underline">
 									{post.title}
 								</a>
 								<p class="text-light text-sm text-gray-500">{formatDate(post.date)}</p>

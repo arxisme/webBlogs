@@ -56,18 +56,18 @@
     }
   }}>
     <div>
-      <label class="block font-medium" for="name">Name</label>
-      <input id="name" class="border rounded px-3 py-2 w-full" bind:value={name} required />
+      <label class="block  mid-bold" for="name">Name</label>
+      <input id="name" class="border mid-bold rounded px-3 py-2 w-full" bind:value={name} required />
     </div>
 
     <div>
-      <label class="block font-medium" for="email">Email</label>
-      <input id="email" class="border rounded px-3 py-2 w-full" type="email" bind:value={email} required />
+      <label class="block mid-bold" for="email">Email</label>
+      <input id="email" class="border rounded mid-bold px-3 py-2 w-full" type="email" bind:value={email} required />
     </div>
 
     <div>
-      <label class="block font-medium" for="message">Message</label>
-      <textarea id="message" class="border rounded px-3 py-2 w-full" bind:value={message} required></textarea>
+      <label class="block mid-bold" for="message">Message</label>
+      <textarea id="message" class="border mid-bold rounded px-3 py-2 w-full" bind:value={message} required></textarea>
     </div>
 
    <div class="w-full flex justify-center">
