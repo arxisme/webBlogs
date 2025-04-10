@@ -22,6 +22,9 @@ export async function load({ params }) {
   const posts = getAllPosts();
 
   // Normalize LaTeX expressions to remove line breaks
+  if (!post) {
+    throw new Error(`Post with slug "${params.slug}" not found.`);
+  }
   const normalizedContent = normalizeLatex(post.content);
 
   // Parse the post content with marked

@@ -2,7 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 
-const contentDir = path.join(process.cwd(), 'src/content');
+const contentDir = path.join(process.cwd(), 'static/content');
 
 type PostMeta = {
   slug: string;

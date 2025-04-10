@@ -1,0 +1,13 @@
+{
+  "builds": [
+    {
+      "src": "src/**/*",
+      "use": "@vercel/node"
+    }
+  ],
+  "functions": {
+    "content": {
+      "includeFiles": "src/content/**/*"
+    }
+  }
+}

@@ -9,5 +9,13 @@ export default defineConfig({
   plugins: [sveltekit(), tailwindcss()],
   define: {
     'process.env': process.env
+  },
+  build: {
+    rollupOptions: {
+      input: {
+        main: './src/main.ts',
+        content: './src/content/**/*'
+      }
+    }
   }
 });
