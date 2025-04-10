@@ -9,11 +9,11 @@ type PostMeta = {
   date: string;
 };
 export function getAllPosts(): PostMeta[] {
-  const files = fs.readdirSync('content');
+  const files = fs.readdirSync(contentDir);
 
   return files.map((file) => {
     const slug = file.replace('.md', '');
-    const raw = fs.readFileSync(path.join('content', file), 'utf-8');
+    const raw = fs.readFileSync(path.join(contentDir, file), 'utf-8');
     const { data } = matter(raw);
 
     return {
