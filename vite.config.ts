@@ -10,12 +10,5 @@ export default defineConfig({
   define: {
     'process.env': process.env
   },
-  build: {
-    rollupOptions: {
-      input: {
-        main: './src/main.ts',
-        content: './src/content/**/*'
-      }
-    }
-  }
+  
 });
