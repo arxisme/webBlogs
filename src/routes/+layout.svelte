@@ -3,6 +3,11 @@
   import Nav from "../lib/components/Nav.svelte";
   import Footer from "../lib/components/Footer.svelte";
 
+	import { injectAnalytics } from '@vercel/analytics/sveltekit'
+  injectAnalytics({
+    mode: 'production',
+    debug: false,
+  });
 </script>
 
 
